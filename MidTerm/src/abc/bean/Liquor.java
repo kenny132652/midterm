@@ -15,7 +15,7 @@ public class Liquor {
     @CsvBindByPosition(position = 4)
     private String 單位;
     @CsvBindByPosition(position = 5)
-    private String 建議售價;
+    private int 建議售價;
     @CsvBindByPosition(position = 6)
     private String 備註;
 
@@ -61,11 +61,11 @@ public class Liquor {
         this.單位 = 單位;
     }
 
-    public String get建議售價() {
+    public int get建議售價() {
         return this.建議售價;
     }
 
-    public void set建議售價(String 建議售價) {
+    public void set建議售價(int 建議售價) {
         this.建議售價 = 建議售價;
     }
 
@@ -79,15 +79,8 @@ public class Liquor {
 
     @Override
     public String toString() {
-        return "{" +
-            " 產品類別='" + get產品類別() + "'" +
-            ", 產品代號='" + get產品代號() + "'" +
-            ", 品名='" + get品名() + "'" +
-            ", 包裝='" + get包裝() + "'" +
-            ", 單位='" + get單位() + "'" +
-            ", 建議售價='" + get建議售價() + "'" +
-            ", 備註='" + get備註() + "'" +
-            "}";
+        return " | " + get產品類別() + " | " + get產品代號() + " | " + get品名() + " | " +
+             get包裝() + " | " + get單位() + " | " + get建議售價() + " | " + get備註() + " | ";
     }
 
 }
